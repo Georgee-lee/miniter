@@ -1,0 +1,45 @@
+.left-container {
+  width: 250px;
+}
+
+.user-info-header {
+  /* width: 100%; */
+  height: 80px;
+
+  background-color: #1DA1F2;
+}
+
+.user-info-content {
+  /* width: 100%; */
+  height: 140px;
+
+  background-color: white;
+}
+
+.tweet-info-wrap {
+  /* width: 100%; */
+  height: 40%;
+  padding-left: 15px;
+}
+
+.tweet-tweet {
+  display: block;
+  margin-bottom: 10px;
+
+  color: gray;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.user-tweet-count {
+  color: #1DA1F2;
+}
+
+.user-tweet-name {
+  display: block;
+  text-align: center;
+  padding: 25px 0;
+
+  font-size: 20px;
+  font-weight: bold;
+}

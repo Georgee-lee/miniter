@@ -1,0 +1,44 @@
+.signup-container {
+  max-width: 500px;
+  min-width: 320px;
+  width: 100%;
+
+  margin: 200px auto 0;
+
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  height: 35px;
+  font-size: 14px;
+  display: block;
+
+  outline: none;
+
+  border: none;
+  border-bottom: 1px solid black;
+
+  margin-bottom: 18px;
+
+  background-color: rgba(240, 240, 240, 0.4);
+}
+
+.signup-btn {
+  width: 100%;
+  height: 30px;
+  font-size: 13px;
+  border-radius: 20px;
+
+  margin-top: 5px;
+  font-weight: bold;
+
+  cursor: pointer;
+  color: white;
+  background-color: rgb(50, 169, 244);
+}
+
+.alert {
+  color: red;
+  font-size: 10px;
+}
