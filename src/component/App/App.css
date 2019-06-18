@@ -1,0 +1,26 @@
+.move {
+  width: 100%;
+  text-align: center;
+}
+
+.move-btn {
+  display: inline-block;
+  width: 150px;
+  padding: 4px;
+  margin-right: 20px;
+
+  font-size: 13px;
+  border-radius: 20px;
+  font-weight: bold;
+
+  cursor: pointer;
+  color: white;
+  background-color: rgb(50, 169, 244);
+
+  text-decoration: none;
+}
+
+.tw-logo {
+  display: block;
+  margin: 20px auto;
+}

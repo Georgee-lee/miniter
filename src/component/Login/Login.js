@@ -27,6 +27,10 @@ class Login extends React.Component {
     }
   }
 
+  goBack = () => {
+    this.props.history.push('/');
+  }
+
   // login() {
   //     const id = this.state.id;
   //     const pw = this.state.pw;
@@ -67,7 +71,7 @@ class Login extends React.Component {
 
         <div className="move">
           <Link to="/signup" className="move-btn">회원가입</Link>
-          <Link to="/tweet" className="move-btn">트윗보기</Link>
+          <button onClick={this.goBack} className="move-btn">홈으로</button>
         </div>
       </div>
     )
