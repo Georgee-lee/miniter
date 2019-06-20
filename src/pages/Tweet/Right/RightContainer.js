@@ -12,6 +12,13 @@ class RightContainer extends Component {
     user: this.props.user.name
   }
 
+  handleEnter = (e) => {
+    // console.log(e.keyCode);
+    if(e.keyCode === 13) {
+      this.handleClick();
+    }
+  }  
+
   handleChange = (e) => {
     this.setState({
       input: e.currentTarget.value.trim()
@@ -41,7 +48,7 @@ class RightContainer extends Component {
   render () {
 
     return (
-      <div className="right-container">
+      <div className="right-container" onKeyUp={(e) => this.handleEnter(e)}>
         <TweetBox onChange={this.handleChange} onClick={this.handleClick} value={this.state.input}/>
         <Tweets tweetlist={this.state.tweets} />
       </div>

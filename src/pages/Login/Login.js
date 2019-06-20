@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+
+import Input from '../../component/InputBox/Input';
 import './Login.css';
 
 class Login extends React.Component {
@@ -41,33 +43,34 @@ class Login extends React.Component {
   // }
 
   render() {
+
+    const { id, pw, idCheck, pwCheck } = this.state;
+
     return (
       <div className="login-container">
         <h1>Log in to Miniter</h1>
-  
-        <form className="login-wrap">
-          <input 
-            value={this.state.id}
-            type="text" 
-            placeholder="Enter ID" 
-            className="user-id" 
-            onChange={e => { this.checkActive(e, 1) }}
-          />
 
-          <input 
-            type="password" 
-            placeholder="Password" 
-            className="user-pw" 
-            onChange={(e) => { this.checkActive(e, 2) }}
-          />
+        <Input 
+          value={id}
+          type="text" 
+          placeholder="Enter ID" 
+          className="user-id"
+          onChange={(e) => this.checkActive(e, 1)}
+        />
 
-          <input 
-            // onClick={this.login}
-            type="submit"
-            className={this.state.pwCheck && this.state.idCheck ? "login-btn active" : "login-btn"}
-            value="Log in"
-          />
-        </form>
+        <Input 
+          type="password" 
+          placeholder="Password" 
+          className="user-pw" 
+          onChange={(e) => this.checkActive(e, 2)}
+        />
+
+        <Input 
+          // onClick={this.login}
+          type="submit"
+          className={ idCheck && pwCheck ? "login-btn active" : "login-btn"}
+          value="Log in"
+        />
 
         <div className="move">
           <Link to="/signup" className="move-btn">회원가입</Link>
