@@ -45,7 +45,6 @@ class RightContainer extends Component {
   }
 
   render () {
-
     return (
       <div className="right-container" onKeyUp={(e) => this.handleEnter(e)}>
         <TweetBox onChange={this.handleChange} onClick={this.handleClick} value={this.state.input}/>

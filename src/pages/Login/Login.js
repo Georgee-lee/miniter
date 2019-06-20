@@ -5,6 +5,9 @@ import Input from '../../component/InputBox/Input';
 import './Login.css';
 
 class Login extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
   state = {
     idCheck: false,
@@ -33,18 +36,32 @@ class Login extends React.Component {
     this.props.history.push('/');
   }
 
-  // login() {
-  //     const id = this.state.id;
-  //     const pw = this.state.pw;
+  login() {
+      const newUser = {
+        user_id: this.state.id,
+        user_pw: this.state.pw
+      }
 
-  //     fetch('').then()
+      fetch('http://10.58.4.65:8000/user/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newUser)
+      })
+      .then(res => res.json())
+      .then(result => {
+        console.log(result);
+        alert('로그인');
+        this.props.history.push('./tweets');
+      })
 
-  //     //  성공시 this.props.history.push('/tweet') 이런 식으로 Router의 히스토리를 이용하여 전달
-  // }
+      //  성공시 this.props.history.push('/tweet') 이런 식으로 Router의 히스토리를 이용하여 전달
+  }
 
   render() {
 
-    const { id, pw, idCheck, pwCheck } = this.state;
+    const { id, idCheck, pwCheck } = this.state;
 
     return (
       <div className="login-container">
@@ -66,7 +83,7 @@ class Login extends React.Component {
         />
 
         <Input 
-          // onClick={this.login}
+          onClick={this.login.bind(this)}
           type="submit"
           className={ idCheck && pwCheck ? "login-btn active" : "login-btn"}
           value="Log in"

@@ -15,10 +15,13 @@ class Tweet extends React.Component {
   }
 
   render() {
+
+    const { user } = this.state
+
     return (
       <div className="tweet-container">
-        <LeftContainer user={this.state.user}/>
-        <RightContainer user={this.state.user}/>
+        <LeftContainer user={user}/>
+        <RightContainer user={user}/>
       </div>
     )
   }

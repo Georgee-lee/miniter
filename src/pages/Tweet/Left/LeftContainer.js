@@ -8,7 +8,7 @@ class LeftContainer extends Component {
       <div className="left-container">
         <div className="user-info-wrap">
           <div className="user-info-header"></div>
-          <UserInfo />
+          <UserInfo user={this.props.user}/>
       </div>
     </div>
     )

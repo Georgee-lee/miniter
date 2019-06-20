@@ -2,8 +2,6 @@ import React from 'react';
 
 const Input = (props) => {
 
-  console.log(props);
-
   return (
     <input
       type={props.type}
@@ -11,6 +9,7 @@ const Input = (props) => {
       value={props.value}
       placeholder={props.placeholder || ''}
       onChange={props.onChange ? (e, num) => {props.onChange(e, num)} : null}
+      onClick={props.onClick ? props.onClick : null}
     />
   )
 }
