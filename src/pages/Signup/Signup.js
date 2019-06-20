@@ -22,7 +22,19 @@ class Signup extends React.Component {
     });
   }
 
-  handleClick = (e) => {
+  isFilled = () => {
+    if(this.state.user_id.length >= 6 &&
+       this.state.user_pw.length >= 6 &&
+       this.state.profile.length >= 4 &&
+       this.state.email) 
+    {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  handleSignUp = (e) => {
     e.preventDefault();
 
     const newUser = {
@@ -56,7 +68,7 @@ class Signup extends React.Component {
         <Input type="password" placeholder="Password" name="user_pw" value={this.state.user_pw} className="user-pw" onChange={(e) => this.handleInput(e)}/>
         <Input type="text" placeholder="email" name="email" value={this.state.email} className="user-pw-check" onChange={(e) => this.handleInput(e)}/>
         <Input type="text" placeholder="Enter Profile" name="profile" value={this.state.profile} className="user-profile" onChange={(e) => this.handleInput(e)}/>
-        <Input type="submit" className="signup-btn" value="Sign up" onClick={this.handleClick} />
+        <Input type="submit" className={this.isFilled() ? "signup-btn active" : "signup-btn"} value="Sign up" onClick={this.handleSignUp} />
         <p className="alert"></p>
   
         <div>

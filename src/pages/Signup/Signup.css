@@ -32,7 +32,9 @@ input {
 
   margin-top: 5px;
   font-weight: bold;
+}
 
+.active {
   cursor: pointer;
   color: white;
   background-color: rgb(50, 169, 244);
