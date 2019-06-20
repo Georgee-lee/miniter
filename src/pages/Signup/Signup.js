@@ -16,9 +16,9 @@ class Signup extends React.Component {
     profile: ""
   }
 
-  handleInput(name, value) {
+  handleInput(e) {
     this.setState({
-      [name]: value
+      [e.target.name]: e.target.value
     });
   }
 
@@ -47,14 +47,15 @@ class Signup extends React.Component {
   }
 
   render () {
+
     return (
       <div className="signup-container">
         <h1>Sign up to Miniter</h1>
   
-        <Input type="text" placeholder="Enter ID" className="user-id" onChange={(e) => this.handleInput('user_id', e.target.value)} />
-        <Input type="password" placeholder="Password" className="user-pw" onChange={(e) => this.handleInput('user_pw', e.target.value)}/>
-        <Input type="text" placeholder="email" className="user-pw-check" onChange={(e) => this.handleInput('email', e.target.value)}/>
-        <Input type="text" placeholder="Enter Profile" className="user-profile" onChange={(e) => this.handleInput('profile', e.target.value)}/>
+        <Input type="text" placeholder="Enter ID" name="user_id" value={this.state.user_id} className="user-id" onChange={(e) => this.handleInput(e)} />
+        <Input type="password" placeholder="Password" name="user_pw" value={this.state.user_pw} className="user-pw" onChange={(e) => this.handleInput(e)}/>
+        <Input type="text" placeholder="email" name="email" value={this.state.email} className="user-pw-check" onChange={(e) => this.handleInput(e)}/>
+        <Input type="text" placeholder="Enter Profile" name="profile" value={this.state.profile} className="user-profile" onChange={(e) => this.handleInput(e)}/>
         <Input type="submit" className="signup-btn" value="Sign up" onClick={this.handleClick} />
         <p className="alert"></p>
   
