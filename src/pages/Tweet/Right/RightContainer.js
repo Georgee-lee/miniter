@@ -13,11 +13,10 @@ class RightContainer extends Component {
   }
 
   handleEnter = (e) => {
-    // console.log(e.keyCode);
     if(e.keyCode === 13) {
       this.handleClick();
     }
-  }  
+  }
 
   handleChange = (e) => {
     this.setState({
