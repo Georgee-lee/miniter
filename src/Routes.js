@@ -4,10 +4,10 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import App from './component/App/App';
-import Tweet from './component/Tweet/Tweet'
-import Login from './component/Login/Login';
-import Signup from './component/Signup/Signup';
+import App from './App/App';
+import Tweet from './pages/Tweet/Tweet'
+import Login from './pages/Login/Login';
+import Signup from './pages/Signup/Signup';
 
 class Routes extends React.Component {
   render() {
