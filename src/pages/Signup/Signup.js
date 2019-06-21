@@ -65,9 +65,9 @@ class Signup extends React.Component {
         <h1>Sign up to Miniter</h1>
   
         <Input type="text" placeholder="Enter ID" name="user_id" value={this.state.user_id} className="user-id" onChange={(e) => this.handleInput(e)} />
-        <Input type="password" placeholder="Password" name="user_pw" value={this.state.user_pw} className="user-pw" onChange={(e) => this.handleInput(e)}/>
-        <Input type="text" placeholder="email" name="email" value={this.state.email} className="user-pw-check" onChange={(e) => this.handleInput(e)}/>
-        <Input type="text" placeholder="Enter Profile" name="profile" value={this.state.profile} className="user-profile" onChange={(e) => this.handleInput(e)}/>
+        <Input type="password" placeholder="Password" name="user_pw" value={this.state.user_pw} className="user-pw" onChange={(e) => this.handleInput(e)} />
+        <Input type="text" placeholder="email" name="email" value={this.state.email} className="user-pw-check" onChange={(e) => this.handleInput(e)} />
+        <Input type="text" placeholder="Enter Profile" name="profile" value={this.state.profile} className="user-profile" onChange={(e) => this.handleInput(e)} />
         <Input type="submit" className={this.isFilled() ? "signup-btn active" : "signup-btn"} value="Sign up" onClick={this.handleSignUp} />
         <p className="alert"></p>
   
