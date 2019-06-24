@@ -4,8 +4,6 @@ import Button from '../../../component/Button/Button';
 const TweetBox = (props) => {
 
   const { isEdit } = props;
-  console.log(isEdit);
-
 
   return (
     <div className="tweet-input-wrap">
