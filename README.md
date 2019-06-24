@@ -1,7 +1,7 @@
 # 해당 프로젝트는 트위터의 모습과 기능을 따라서 React로 제작한 미니터입니다.
 
 ## 실행 시 브라우저에서 보이는 첫 화면
-![startPage](./startPage.png)
+<img width="500" alt="startPage" src="https://user-images.githubusercontent.com/43393426/59996558-a1c75700-9695-11e9-84bd-fe272ef3d7a7.png">
 
 
 ## 사용방법
