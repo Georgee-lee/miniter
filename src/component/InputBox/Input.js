@@ -8,9 +8,9 @@ const Input = (props) => {
       className={props.className}
       name={props.name}
       value={props.value}
-      placeholder={props.placeholder || ''}
-      onChange={props.onChange ? (e, num) => {props.onChange(e, num)} : null}
-      onClick={props.onClick ? props.onClick : null}
+      placeholder={props.placeholder}
+      onChange={(e, num) => {props.onChange(e, num)}}
+      onClick={props.onClick}
     />
   )
 }

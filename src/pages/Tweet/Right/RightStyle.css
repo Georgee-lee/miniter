@@ -46,6 +46,8 @@
 }
 
 .tweet-list li {
+  position: relative;
+
   width: 700px;
   padding: 10px;
 
@@ -62,4 +64,18 @@
 
 .tweet-list li:first-child {
   background-color: #edf3f7;
+}
+
+.tweet-list li button {
+  position: absolute;
+  right: 45px;
+}
+
+.tweet-list li button:last-child {
+  right: 20px;
+}
+
+.tweet-list li span {
+  display: inline-block;
+  width: 90%;
 }
