@@ -5,7 +5,7 @@ import './Tweet.css';
 
 const fakeUser = {
   name: 'George',
-  tweet: 5
+  tweet: 3
 }
 
 class Tweet extends React.Component {
